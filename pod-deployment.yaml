@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mirror-git-app
+spec:
+  containers:
+    - name: mirror-git-appcontainer
+      image: mirror-repos:v1
+      workingDir: /app
+      command: ["python", "./mirror-repos.py"]
